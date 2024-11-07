@@ -1,0 +1,208 @@
+.order-result, .order-result-failed {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+}
+
+.order-result {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+}
+
+.order-result:before {
+    content: "✔";
+    font-size: 24px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.order-result-failed {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+}
+
+.order-result-failed:before {
+    content: "✖";
+    font-size: 24px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.order-result .close-btn, .order-result-failed .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.order-result .close-btn {
+    color: #3c763d;
+}
+
+.order-result-failed .close-btn {
+    color: #a94442;
+}
+
+.order-result .close-btn:hover, .order-result-failed .close-btn:hover {
+    color: #c9302c;
+}
+
+
+
+.cart-page {
+    margin: 30px 0;
+}
+
+.cart-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shop-table-wrapper {
+    overflow-x: auto;
+}
+
+.shop-table {
+    border-collapse: separate; /* Allow for rounded corners */
+    border-spacing: 0; /* Remove default spacing between cells */
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevents border radius from being cut off */
+}
+
+.shop-table th {
+    background-color: #b2f6fd; /* Bold header color */
+    font-weight: 600; /* Bolder font */
+    padding: 10px; /* Padding for header cells */
+    text-transform: uppercase; /* Uppercase text for headers */
+    letter-spacing: 1px; /* Spacing for readability */
+}
+
+.shop-table td {
+    background-color: #fff; /* White background for table cells */
+    text-align: center;
+    padding: 12px 10px; /* Padding for data cells */
+    border-bottom: 1px solid #dee0ea; /* Light border for separation */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.shop-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row color for better readability */
+}
+
+.shop-table tbody tr:hover {
+    background-color: rgba(238, 64, 61, 0.1); /* Light hover effect */
+    transform: translateY(-1px); /* Slight lift on hover */
+}
+
+.shop-table tbody tr td:last-child {
+    border-right: none; /* Remove right border for last column */
+}
+
+
+.cart-collaterals {
+    border: 1px solid #dee0ea;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9; /* Light background */
+}
+.cart-totals {
+    width: 20%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+input[type="text"],
+input[type="email"]
+ {
+    width: 80%; /* Set width to 80% */
+    padding: 15px;
+    border: 1px solid #249ddc;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px; /* Increased font size */
+    margin: 0 auto 15px; /* Center horizontally with margin below */
+    display: block; /* Ensures inputs are block elements */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff; /* White background for inputs */
+}
+span {
+    width: 78%; /* Set width to 80% */
+    color: red;
+    font-size: 14px; /* Increased font size */
+    font-weight: bold;
+    margin: 0 auto 15px; /* Center horizontally with margin below */
+    display: block; /* Ensures inputs are block elements */
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+    border-color: #ee403d; /* Red border on focus */
+    box-shadow: 0 0 5px rgba(238, 64, 61, 0.5); /* Subtle shadow effect */
+    outline: none; /* Remove default outline */
+}
+.input-quantity-cart{
+    width: 100%;
+}
+input::placeholder {
+    color: #aaa; /* Placeholder text color */
+    font-style: italic; /* Italic style for placeholder */
+}
+
+
+/* Button Styles */
+button {
+    background-color: #03d59a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px; /* Rounded button */
+    cursor: pointer;
+    font-size: 16px; /* Increase font size for buttons */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block; /* Center button */
+    margin: 0 auto; /* Center horizontally */
+}
+
+button:hover {
+    background-color: #65ee4d;
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 767px) {
+    input[type="text"],
+    input[type="email"]
+    {
+        width: 100%; /* Set width to 80% */
+    }
+    .cart-totals {
+        width: 30%;
+    }
+    .cart-collaterals {
+        padding: 20px; /* Adjust padding on small screens */
+    }
+}
+@media (max-width: 575px) {
+    .cart-totals {
+        width: 40%;
+    }
+    .cart-collaterals {
+        padding: 20px; /* Adjust padding on small screens */
+    }
+}

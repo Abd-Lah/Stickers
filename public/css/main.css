@@ -1,0 +1,15 @@
+/* ! global css */
+@import url(base.css);
+
+/* ! layout */
+@import url(layout/header.css);
+@import url(layout/footer.css);
+
+/* ! components */
+@import url(components/slider.css);
+@import url(components/product-item.css);
+
+/* ! pages */
+@import url(pages/home.css);
+@import url(pages/contact.css);
+@import url(pages/cart.css);
