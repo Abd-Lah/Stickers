@@ -162,7 +162,23 @@
     const quantity = parseInt(quantityInput.value, 10);
     addToCart(productId, quantity);
 });
-
+    function updateCartSession(cart) {
+        fetch('/update-cart-session', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            },
+            body: JSON.stringify({ cart: cart })
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Session updated:', data);
+            })
+            .catch(error => {
+                console.error('Error updating session:', error);
+            });
+    }
     const addToCart = (productId, quantity = 1) => {
         // Ensure total_price is initialized as a number
         let total_price = parseFloat(localStorage.getItem('total_price')) || 0;
@@ -203,21 +219,7 @@
     // Update displayed total price
     document.querySelector('.total-price').innerHTML = total_price + " MAD"; // Update displayed total price
 
-    fetch('/update-cart-session', {
-        method: 'POST',
-        headers: {
-        'Content-Type': 'application/json',
-        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-    },
-        body: JSON.stringify({ cart: cart })
-    })
-        .then(response => response.json())
-        .then(data => {
-        console.log('Session updated:', data);
-    })
-        .catch(error => {
-        console.error('Error updating session:', error);
-    });
+    updateCartSession(cart);
     closeModal();
 };
 
@@ -228,4 +230,6 @@
 
     // Initial load of products
     fetchProducts();
+    updateCartSession(cart);
+
 });
