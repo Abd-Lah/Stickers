@@ -3,14 +3,14 @@
         <div class="header-logo-wrapper p-0">
             <div class="logo-wrapper">
                 <a href="{{route('dashboard')}}">
-                    <img class="img-fluid main-logo" src="{{asset('assets/images/logo/1.png')}}" alt="logo">
-                    <img class="img-fluid white-logo" src="{{asset('assets/images/logo/1-white.png')}}" alt="logo">
+                    <img class="img-fluid main-logo" src="{{asset('assets/images/logo/logo.png')}}" alt="logo">
+                    <img class="img-fluid white-logo" src="{{asset('assets/images/logo/logo.png')}}" alt="logo">
                 </a>
             </div>
             <div class="toggle-sidebar">
                 <i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
                 <a href="{{route('dashboard')}}">
-                    <img src="{{asset('assets/images/logo/1.png')}}" class="img-fluid" alt="">
+                    <img src="{{asset('assets/images/logo/logo.png')}}" class="img-fluid" alt="">
                 </a>
             </div>
         </div>
@@ -25,7 +25,8 @@
                 <li class="profile-nav onhover-dropdown pe-0 me-0">
                     <div class="media profile-media">
                         <div class="user-name-hide media-body">
-                            <span>Badr KASSA</span>
+                            <span>{{ Auth::user()->name }}</span>
+
                             <p class="mb-0 font-roboto">Admin<i class="middle ri-arrow-down-s-line"></i></p>
                         </div>
                     </div>
@@ -34,12 +35,6 @@
                             <a href="{{route('index-orders')}}">
                                 <i data-feather="archive"></i>
                                 <span>Orders</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="profile-setting.html">
-                                <i data-feather="settings"></i>
-                                <span>Settings</span>
                             </a>
                         </li>
                         <li>

@@ -1,4 +1,4 @@
-
+window.APP_URL = "{{ config('app.url') }}";
     document.addEventListener('DOMContentLoaded', () => {
         const productGrid = document.getElementById('productGrid');
         const loader = document.getElementById('loader');
@@ -40,8 +40,8 @@
             div.innerHTML = `
                             <div class="product-image">
                                 <a href="#">
-                                    <img src="http://localhost/storage/stickers-image/${product.image[0]}" alt="${product.name}" class="img1" />
-                                    <img src="http://localhost/storage/stickers-image/${product.image[1] || product.image[0]}" alt="${product.name}" class="img2" />
+                                    <img src="/storage/stickers-image/${product.image[0]}" alt="${product.name}" class="img1" />
+                                    <img src="/storage/stickers-image/${product.image[1] || product.image[0]}" alt="${product.name}" class="img2" />
                                 </a>
                             </div>
                             <div class="product-info">
@@ -98,16 +98,16 @@
 
     // Display main image
     const mainImage = document.getElementById('modalProductImage');
-    mainImage.src = `http://localhost/storage/stickers-image/${product.image[0]}`;
+    mainImage.src = `/storage/stickers-image/${product.image[0]}`;
 
     // Additional images as buttons
     const imageButtonsContainer = document.getElementById('imageButtonsContainer');
     imageButtonsContainer.innerHTML = '';
     product.image.forEach(img => {
     const imgButton = document.createElement('button');
-    imgButton.style.backgroundImage = `url('http://localhost/storage/stickers-image/${img}')`;
+    imgButton.style.backgroundImage = `url('/storage/stickers-image/${img}')`;
     imgButton.className = 'image-button';
-    imgButton.onclick = () => { mainImage.src = `http://localhost/storage/stickers-image/${img}`; };
+    imgButton.onclick = () => { mainImage.src = `/storage/stickers-image/${img}`; };
     imageButtonsContainer.appendChild(imgButton);
 });
 

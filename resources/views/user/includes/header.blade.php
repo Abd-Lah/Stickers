@@ -11,7 +11,8 @@
                     <i class="bi bi-list" id="btn-menu"></i>
                 </div>
                 <div class="header-left">
-                    <a href="/" class="logo">LOGO</a>
+                    <a href="/" class="logo"> <img width="48%" src="{{asset('assets/images/logo/logo.png')}}"
+                                                   alt="logo"></a>
                 </div>
                 <div class="header-center" id="sidebar">
                     <nav class="navigation">
