@@ -64,7 +64,6 @@ password : badr1997@
 
 ## 📸 Screenshots
 
-> _Please upload or update paths to your screenshots in the `/docs/screenshots` folder._
 
 - ![Homepage](./public/assets/demo/1.png)
 - ![view product](./public/assets/demo/2.png)
