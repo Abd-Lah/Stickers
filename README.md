@@ -4,17 +4,7 @@ A sleek and minimal sticker e-commerce platform for laptops and devices. Built u
 
 ---
 
-## 📸 Screenshots
 
-> _Please upload or update paths to your screenshots in the `/docs/screenshots` folder._
-
-- ![Homepage](docs/screenshots/homepage.png)
-- ![Cart](docs/screenshots/cart.png)
-- ![Admin Dashboard](docs/screenshots/admin-dashboard.png)
-- ![Product Form](docs/screenshots/product-form.png)
-- ![Order List](docs/screenshots/order-list.png)
-
----
 
 ## 🛠️ Features
 
@@ -71,3 +61,15 @@ then visit http://localhost:8000
 for admin http://localhost:8000/admin/login
 email: badr@stickers.com
 password : badr1997@
+
+## 📸 Screenshots
+
+> _Please upload or update paths to your screenshots in the `/docs/screenshots` folder._
+
+- ![Homepage](./public/assets/demo/1.png)
+- ![view product](./public/assets/demo/2.png)
+- ![cart](./public/assets/demo/3.png)
+- ![admin](./public/assets/demo/7.png)
+- ![Order List](./public/assets/demo/9.png)
+  and more ...
+---
